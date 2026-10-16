@@ -3,17 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0; url=/software-vault/">
-  <title>跳转中…</title>
+  <title>Felix 的软件站</title>
   <style>
-    body { font-family: "Segoe UI", "Microsoft YaHei", sans-serif; background: #f4f5fb;
-           display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
-    a { color: #4f46e5; font-weight: 600; }
-    p { color: #7a8099; }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(160deg, #eef0ff, #f4f5fb 45%, #e6f5ee);
+      padding: 20px;
+    }
+    .hub { width: 100%; max-width: 520px; }
+    h1 { text-align: center; font-size: 22px; color: #1f2333; margin-bottom: 6px; }
+    p.sub { text-align: center; color: #7a8099; font-size: 13px; margin-bottom: 26px; }
+    a.card {
+      display: flex; align-items: center; gap: 16px; text-decoration: none;
+      background: #fff; border: 1px solid #e6e8f2; border-radius: 16px;
+      padding: 20px 22px; margin-bottom: 14px;
+      box-shadow: 0 1px 3px rgba(31,35,51,.06), 0 4px 14px rgba(31,35,51,.05);
+      transition: transform .12s, box-shadow .12s;
+    }
+    a.card:hover { transform: translateY(-2px); box-shadow: 0 6px 22px rgba(31,35,51,.12); }
+    .ico { font-size: 30px; flex: none; }
+    .t { font-size: 16px; font-weight: 700; color: #1f2333; }
+    .d { font-size: 12.5px; color: #7a8099; margin-top: 2px; }
+    .arrow { margin-left: auto; color: #b0b4c8; font-size: 18px; }
+    .green .t { color: #0e7a4f; }
+    .indigo .t { color: #4f46e5; }
   </style>
 </head>
 <body>
-  <p>正在进入「软件资料库」… <a href="/software-vault/">点此直达</a></p>
-  <script>location.replace('/software-vault/');</script>
+  <div class="hub">
+    <h1>Felix 的软件站</h1>
+    <p class="sub">选一个入口</p>
+    <a class="card green" href="/software-portal/">
+      <span class="ico">⬇️</span>
+      <span><span class="t">软件下载中心</span><br><span class="d">客户入口 · 注册会员 · 下载软件</span></span>
+      <span class="arrow">›</span>
+    </a>
+    <a class="card indigo" href="/software-vault/">
+      <span class="ico">📦</span>
+      <span><span class="t">我的软件资料库</span><br><span class="d">私人档案 · 序列号与安装包备份</span></span>
+      <span class="arrow">›</span>
+    </a>
+  </div>
 </body>
 </html>
